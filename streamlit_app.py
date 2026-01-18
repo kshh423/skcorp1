@@ -9,6 +9,9 @@ import matplotlib.pyplot as plt
 from matplotlib import font_manager
 import platform
 
+# 한글 폰트 설정
+from utils import setup_korean_font, install_font_guide
+
 # 분석 엔진
 from analysis import run_monte_carlo_analysis, run_quant_analysis
 
@@ -21,10 +24,8 @@ from visualizations import (
     draw_zscore_chart
 )
 
-# 한글 폰트 설정
-if platform.system() == 'Windows':
-    plt.rcParams['font.family'] = 'Malgun Gothic'
-plt.rcParams['axes.unicode_minus'] = False
+# 한글 폰트 초기화
+font_name = setup_korean_font()
 
 # 페이지 설정
 st.set_page_config(
@@ -265,6 +266,14 @@ with tab2:
 
 # Footer
 st.markdown("---")
+
+# 폰트 정보
+if font_name:
+    st.caption(f"🔤 사용 중인 폰트: {font_name}")
+else:
+    with st.expander("⚠️ 한글 폰트가 설정되지 않았습니다. 설치 가이드 보기"):
+        st.markdown(install_font_guide())
+
 st.caption("""
 📊 S&P 500 종합 퀀트 분석 시스템 v2.0  
 🔹 하이브리드 데이터: CSV (1928~2025) + yfinance (2026~)  
