@@ -36,7 +36,7 @@ st.set_page_config(
 )
 
 # 제목
-st.title("S&P 500 분석 시스템 v2.0")
+#st.title("S&P 500 분석 시스템 v2.0")
 #st.markdown("---")
 
 # 사이드바 - 전역 설정
@@ -149,7 +149,7 @@ with tab1:
                 mean_return = np.mean(data['returns_pct'])
                 st.metric("예상 평균 수익률", f"{mean_return:+.2f}%")
             
-            st.markdown("---")
+            #st.markdown("---")
             
             # 차트 그리기
             fig = plt.figure(figsize=(14, 10))
@@ -240,7 +240,7 @@ with tab2:
             with col_m4:
                 st.metric("Z-score", f"{current_z:+.2f}σ")
             
-            st.markdown("---")
+            #st.markdown("---")
             
             # 차트 그리기
             fig = plt.figure(figsize=(14, 12))
