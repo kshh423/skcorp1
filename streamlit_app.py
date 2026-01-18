@@ -188,7 +188,7 @@ with tab2:
     # 옵션
     col_opt1, col_opt2 = st.columns([5, 2])
     with col_opt1:
-        st.info("💡 전역 설정(좌측 사이드바)이 자동으로 연동됩니다.")
+        #st.info("💡 전역 설정(좌측 사이드바)이 자동으로 연동됩니다.")
     with col_opt2:
         run_quant_btn = st.button("🚀 퀀트 지표 실행", type="primary", key="tab2_run", use_container_width=True)
     
