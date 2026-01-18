@@ -22,9 +22,13 @@ def setup_korean_font():
         fonts = ['Malgun Gothic', 'NanumGothic', 'NanumBarunGothic']
     elif system == 'Darwin':  # Mac
         fonts = ['AppleGothic', 'NanumGothic', 'NanumBarunGothic', 'Arial Unicode MS']
-    else:  # Linux
-        fonts = ['NanumGothic', 'NanumBarunGothic', 'NanumSquare', 'DejaVu Sans']
-    
+    if system == 'Linux':
+            nanum_path = '/usr/share/fonts/truetype/nanum/NanumGothic.ttf'
+            if os.path.exists(nanum_path):
+                fm.fontManager.addfont(nanum_path)
+                plt.rcParams['font.family'] = 'NanumGothic'
+                plt.rcParams['axes.unicode_minus'] = False
+                return 'NanumGothic'
     # 사용 가능한 폰트 찾기
     selected_font = None
     for font in fonts:
