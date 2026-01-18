@@ -36,8 +36,8 @@ st.set_page_config(
 )
 
 # 제목
-st.title("📊 S&P 500 종합 퀀트 분석 시스템 v2.0")
-st.markdown("---")
+st.title("S&P 500 분석 시스템 v2.0")
+#st.markdown("---")
 
 # 사이드바 - 전역 설정
 with st.sidebar:
@@ -70,7 +70,7 @@ with st.sidebar:
         help="• relative: 선택 기간 내에서의 상대적 순위\n• absolute: 1928년부터 전체 기간 대비 절대적 순위"
     )
     
-    st.markdown("---")
+    #st.markdown("---")
     
     # 정보
     st.info("""
@@ -81,7 +81,7 @@ with st.sidebar:
     - absolute 모드: 역사적 위치 파악
     """)
     
-    st.markdown("---")
+    #st.markdown("---")
     st.caption("v2.0 | 하이브리드 데이터 로딩")
 
 # 탭 생성
@@ -102,7 +102,7 @@ with tab1:
     with col_opt3:
         run_analysis_btn = st.button("🚀 분석 실행", type="primary", key="tab1_run", use_container_width=True)
     
-    st.markdown("---")
+
     
     # 분석 실행
     if run_analysis_btn or 'tab1_data' in st.session_state:
@@ -192,7 +192,7 @@ with tab2:
     with col_opt2:
         run_quant_btn = st.button("🚀 퀀트 지표 실행", type="primary", key="tab2_run", use_container_width=True)
     
-    st.markdown("---")
+
     
     # 분석 실행
     if run_quant_btn or 'tab2_data' in st.session_state:
