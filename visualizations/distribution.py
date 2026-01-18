@@ -3,11 +3,6 @@
 """
 import matplotlib.pyplot as plt
 import numpy as np
-import platform
-
-if platform.system() == 'Windows':
-    plt.rcParams['font.family'] = 'Malgun Gothic'
-plt.rcParams['axes.unicode_minus'] = False
 
 def draw_distribution_chart(ax, data):
     """

@@ -2,11 +2,6 @@
 퀀트 리스크 지표 시각화 (3-Panel)
 """
 import matplotlib.pyplot as plt
-import platform
-
-if platform.system() == 'Windows':
-    plt.rcParams['font.family'] = 'Malgun Gothic'
-plt.rcParams['axes.unicode_minus'] = False
 
 def draw_composite_chart(ax, data):
     """

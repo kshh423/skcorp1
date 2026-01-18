@@ -3,11 +3,6 @@
 """
 import matplotlib.pyplot as plt
 import pandas as pd
-import platform
-
-if platform.system() == 'Windows':
-    plt.rcParams['font.family'] = 'Malgun Gothic'
-plt.rcParams['axes.unicode_minus'] = False
 
 def draw_percentile_chart(ax, data, show_price_bg=False, start_date=None, 
                           show_label=True, title="백분위 순위"):
