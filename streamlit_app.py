@@ -29,8 +29,8 @@ font_name = setup_korean_font()
 
 # 페이지 설정
 st.set_page_config(
-    page_title="S&P 500 퀀트 분석 시스템",
-    page_icon="📊",
+    #page_title="S&P 500 퀀트 분석 시스템",
+    #page_icon="📊",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -91,7 +91,7 @@ tab1, tab2 = st.tabs(["📈 종합 분석 (Monte Carlo)", "📊 퀀트 리스크
 # TAB 1: 몬테카를로 시뮬레이션
 # ========================================
 with tab1:
-    st.header("📈 종합 분석 (Monte Carlo)")
+    #st.header("📈 종합 분석 (Monte Carlo)")
     
     # 옵션
     col_opt1, col_opt2, col_opt3 = st.columns([2, 2, 2])
@@ -183,7 +183,7 @@ with tab1:
 # TAB 2: 퀀트 리스크 분석
 # ========================================
 with tab2:
-    st.header("📊 퀀트 리스크 분석 (3-Panel)")
+    #st.header("📊 퀀트 리스크 분석 (3-Panel)")
     
     # 옵션
     col_opt1, col_opt2 = st.columns([5, 2])
